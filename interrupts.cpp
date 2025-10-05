@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     /******************ADD YOUR VARIABLES HERE*************************/
     int current_time = 0; //tracks the time as the program continues
 
-    int context_time = 10; //value to save and restore the og clock-time
+    int context_time = 20; //value to save and restore the og clock-time
     int isr_activity_time = 40; //each ISR block timing
 
 

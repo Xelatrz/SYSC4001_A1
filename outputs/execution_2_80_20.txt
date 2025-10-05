@@ -1,0 +1,75 @@
+0, 95CPU burst
+95, 1, switch to kernel mode
+96, 20, context saved
+116, 1, find vector 6 in memory position 0x000C
+117, 1, load address 0X0639 into the PC
+118, 80 ,call device driver
+198, 80 ,call device driver
+278, 80 ,call device driver
+358, 25 ,call device driver
+383, 1, IRET
+384, 20, context restored
+404, 1, switch to user mode
+1, 26CPU burst
+27, 1, switch to kernel mode
+28, 20, context saved
+48, 1, find vector 6 in memory position 0x000C
+49, 1, load address 0X0639 into the PC
+50, 80 ,ISR body for end_io6
+130, 80 ,ISR body for end_io6
+210, 80 ,ISR body for end_io6
+290, 25 ,ISR body for end_io6
+315, 1, IRET
+316, 20, context restored
+336, 1, switch to user mode
+1, 72CPU burst
+73, 1, switch to kernel mode
+74, 20, context saved
+94, 1, find vector 17 in memory position 0x0022
+95, 1, load address 0X05B3 into the PC
+96, 80 ,call device driver
+176, 80 ,call device driver
+256, 75 ,call device driver
+331, 1, IRET
+332, 20, context restored
+352, 1, switch to user mode
+1, 50CPU burst
+51, 1, switch to kernel mode
+52, 20, context saved
+72, 1, find vector 17 in memory position 0x0022
+73, 1, load address 0X05B3 into the PC
+74, 80 ,ISR body for end_io17
+154, 80 ,ISR body for end_io17
+234, 75 ,ISR body for end_io17
+309, 1, IRET
+310, 20, context restored
+330, 1, switch to user mode
+1, 88CPU burst
+89, 1, switch to kernel mode
+90, 20, context saved
+110, 1, find vector 14 in memory position 0x001C
+111, 1, load address 0X0165 into the PC
+112, 80 ,call device driver
+192, 80 ,call device driver
+272, 80 ,call device driver
+352, 80 ,call device driver
+432, 80 ,call device driver
+512, 56 ,call device driver
+568, 1, IRET
+569, 20, context restored
+589, 1, switch to user mode
+1, 31CPU burst
+32, 1, switch to kernel mode
+33, 20, context saved
+53, 1, find vector 14 in memory position 0x001C
+54, 1, load address 0X0165 into the PC
+55, 80 ,ISR body for end_io14
+135, 80 ,ISR body for end_io14
+215, 80 ,ISR body for end_io14
+295, 80 ,ISR body for end_io14
+375, 80 ,ISR body for end_io14
+455, 56 ,ISR body for end_io14
+511, 1, IRET
+512, 20, context restored
+532, 1, switch to user mode
+1, 52CPU burst
