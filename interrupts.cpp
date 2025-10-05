@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
         else if (activity == "SYSCALL") {
             int device_num = duration_intr;
 
-            auto [intr_text, new_time] = inter_boilerplate(current_time, device_num, context_time, vectors);
+            auto [intr_text, new_time] = intr_boilerplate(current_time, device_num, context_time, vectors);
             execution += intr_text;
             current_time = new_time; 
 
