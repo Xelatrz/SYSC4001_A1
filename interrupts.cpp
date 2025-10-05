@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
 
             auto [intr_text, new_time] = intr_boilerplate(current_time, device_num, context_time, vectors);
             execution += intr_text;
-            current_time = new_time; 
+            current_time = new_time;
 
             int remaining = delays.at(device_num);
             while(remaining > 0) {
