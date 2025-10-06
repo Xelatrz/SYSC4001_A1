@@ -1,7 +1,8 @@
 /**
  *
  * @file interrupts.cpp
- * @author Cole Galway, Taylor Brumwell
+ * @author Cole Galway 
+ * @author Taylor Brumwell
  *
  */
 
@@ -21,7 +22,7 @@ int main(int argc, char** argv) {
     /******************ADD YOUR VARIABLES HERE*************************/
     int current_time = 0; //tracks the time as the program continues
 
-    int context_time = 20; //value to save and restore the og clock-time
+    int context_time = 10; //value to save and restore the og clock-time
     int isr_activity_time = 40; //each ISR block timing
 
 
@@ -42,9 +43,19 @@ int main(int argc, char** argv) {
         else if (activity == "SYSCALL") {
             int device_num = duration_intr;
 
+            if (device_num >= vectors.size()) {
+                std::cerr << "Error: device_num " << device_num << " is invalid for vectors (max index = " << vectors.size()-1 << ")\n";
+                continue;
+            }
+
             auto [intr_text, new_time] = intr_boilerplate(current_time, device_num, context_time, vectors);
             execution += intr_text;
             current_time = new_time;
+
+            if (device_num >= delays.size()) {
+                std::cerr << "Error: device_num " << device_num  << " is invalid (max index = " << delays.size()-1 << ")\n";
+                continue;
+            }
 
             int remaining = delays.at(device_num);
             while(remaining > 0) {
@@ -68,9 +79,19 @@ int main(int argc, char** argv) {
         else if (activity == "END_IO") {
             int device_num = duration_intr;
 
+            if (device_num >= vectors.size()) {
+                std::cerr << "Error: device_num " << device_num << " is invalid for vectors (max index = " << vectors.size()-1 << ")\n";
+                continue;
+            }
+
             auto [intr_text, new_time] = intr_boilerplate(current_time, device_num, context_time, vectors);
             execution += intr_text;
             current_time = new_time;
+
+            if (device_num >= delays.size()) {
+                std::cerr << "Error: device_num " << device_num  << " is invalid (max index = " << delays.size()-1 << ")\n";
+                continue;
+            }
 
             int device_delay = delays.at(device_num);
             int isr_step_time = 40;

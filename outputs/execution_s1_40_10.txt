@@ -1,0 +1,173 @@
+0, 40CPU burst
+40, 1, switch to kernel mode
+41, 10, context saved
+51, 1, find vector 9 in memory position 0x0012
+52, 1, load address 0X036C into the PC
+53, 40 ,call device driver
+93, 40 ,call device driver
+133, 40 ,call device driver
+173, 36 ,call device driver
+209, 1, IRET
+210, 10, context restored
+220, 1, switch to user mode
+1, 22CPU burst
+23, 1, switch to kernel mode
+24, 10, context saved
+34, 1, find vector 9 in memory position 0x0012
+35, 1, load address 0X036C into the PC
+36, 40 ,ISR body for end_io9
+76, 40 ,ISR body for end_io9
+116, 40 ,ISR body for end_io9
+156, 36 ,ISR body for end_io9
+192, 1, IRET
+193, 10, context restored
+203, 1, switch to user mode
+1, 94CPU burst
+95, 1, switch to kernel mode
+96, 10, context saved
+106, 1, find vector 8 in memory position 0x0010
+107, 1, load address 0X06EF into the PC
+108, 40 ,call device driver
+148, 40 ,call device driver
+188, 40 ,call device driver
+228, 40 ,call device driver
+268, 40 ,call device driver
+308, 40 ,call device driver
+348, 40 ,call device driver
+388, 40 ,call device driver
+428, 40 ,call device driver
+468, 40 ,call device driver
+508, 40 ,call device driver
+548, 40 ,call device driver
+588, 40 ,call device driver
+628, 40 ,call device driver
+668, 40 ,call device driver
+708, 40 ,call device driver
+748, 40 ,call device driver
+788, 40 ,call device driver
+828, 40 ,call device driver
+868, 40 ,call device driver
+908, 40 ,call device driver
+948, 40 ,call device driver
+988, 40 ,call device driver
+1028, 40 ,call device driver
+1068, 40 ,call device driver
+1108, 1, IRET
+1109, 10, context restored
+1119, 1, switch to user mode
+1, 75CPU burst
+76, 1, switch to kernel mode
+77, 10, context saved
+87, 1, find vector 8 in memory position 0x0010
+88, 1, load address 0X06EF into the PC
+89, 40 ,ISR body for end_io8
+129, 40 ,ISR body for end_io8
+169, 40 ,ISR body for end_io8
+209, 40 ,ISR body for end_io8
+249, 40 ,ISR body for end_io8
+289, 40 ,ISR body for end_io8
+329, 40 ,ISR body for end_io8
+369, 40 ,ISR body for end_io8
+409, 40 ,ISR body for end_io8
+449, 40 ,ISR body for end_io8
+489, 40 ,ISR body for end_io8
+529, 40 ,ISR body for end_io8
+569, 40 ,ISR body for end_io8
+609, 40 ,ISR body for end_io8
+649, 40 ,ISR body for end_io8
+689, 40 ,ISR body for end_io8
+729, 40 ,ISR body for end_io8
+769, 40 ,ISR body for end_io8
+809, 40 ,ISR body for end_io8
+849, 40 ,ISR body for end_io8
+889, 40 ,ISR body for end_io8
+929, 40 ,ISR body for end_io8
+969, 40 ,ISR body for end_io8
+1009, 40 ,ISR body for end_io8
+1049, 40 ,ISR body for end_io8
+1089, 1, IRET
+1090, 10, context restored
+1100, 1, switch to user mode
+1, 99CPU burst
+100, 1, switch to kernel mode
+101, 10, context saved
+111, 1, find vector 20 in memory position 0x0028
+112, 1, load address 0X07B7 into the PC
+113, 56CPU burst
+169, 1, switch to kernel mode
+170, 10, context saved
+180, 1, find vector 20 in memory position 0x0028
+181, 1, load address 0X07B7 into the PC
+182, 79CPU burst
+261, 1, switch to kernel mode
+262, 10, context saved
+272, 1, find vector 19 in memory position 0x0026
+273, 1, load address 0X0765 into the PC
+274, 40 ,call device driver
+314, 40 ,call device driver
+354, 40 ,call device driver
+394, 40 ,call device driver
+434, 40 ,call device driver
+474, 40 ,call device driver
+514, 40 ,call device driver
+554, 40 ,call device driver
+594, 40 ,call device driver
+634, 40 ,call device driver
+674, 40 ,call device driver
+714, 40 ,call device driver
+754, 40 ,call device driver
+794, 40 ,call device driver
+834, 40 ,call device driver
+874, 40 ,call device driver
+914, 12 ,call device driver
+926, 1, IRET
+927, 10, context restored
+937, 1, switch to user mode
+1, 101CPU burst
+102, 1, switch to kernel mode
+103, 10, context saved
+113, 1, find vector 19 in memory position 0x0026
+114, 1, load address 0X0765 into the PC
+115, 40 ,ISR body for end_io19
+155, 40 ,ISR body for end_io19
+195, 40 ,ISR body for end_io19
+235, 40 ,ISR body for end_io19
+275, 40 ,ISR body for end_io19
+315, 40 ,ISR body for end_io19
+355, 40 ,ISR body for end_io19
+395, 40 ,ISR body for end_io19
+435, 40 ,ISR body for end_io19
+475, 40 ,ISR body for end_io19
+515, 40 ,ISR body for end_io19
+555, 40 ,ISR body for end_io19
+595, 40 ,ISR body for end_io19
+635, 40 ,ISR body for end_io19
+675, 40 ,ISR body for end_io19
+715, 40 ,ISR body for end_io19
+755, 12 ,ISR body for end_io19
+767, 1, IRET
+768, 10, context restored
+778, 1, switch to user mode
+1, 37CPU burst
+38, 1, switch to kernel mode
+39, 10, context saved
+49, 1, find vector 0 in memory position 0x0000
+50, 1, load address 0X01E3 into the PC
+51, 40 ,call device driver
+91, 40 ,call device driver
+131, 30 ,call device driver
+161, 1, IRET
+162, 10, context restored
+172, 1, switch to user mode
+1, 41CPU burst
+42, 1, switch to kernel mode
+43, 10, context saved
+53, 1, find vector 0 in memory position 0x0000
+54, 1, load address 0X01E3 into the PC
+55, 40 ,ISR body for end_io0
+95, 40 ,ISR body for end_io0
+135, 30 ,ISR body for end_io0
+165, 1, IRET
+166, 10, context restored
+176, 1, switch to user mode
+1, 11CPU burst
