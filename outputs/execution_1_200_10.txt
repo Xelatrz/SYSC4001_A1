@@ -99,3 +99,8 @@
 205, 10, context restored
 215, 1, switch to user mode
 1, 90CPU burst
+
+=== Simulation Summary ===
+User time: 788 ms
+Overhead time: 1160 ms
+Total time: 1948 ms

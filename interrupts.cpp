@@ -25,6 +25,8 @@ int main(int argc, char** argv) {
     int context_time = 10; //value to save and restore the og clock-time
     int isr_activity_time = 40; //each ISR block timing
 
+    int total_overhead_time = 0; //overall duration of overhead work thoughout the whole program
+    int total_user_time = 0; //overall duration of the user application throughout the whole program (everything except overhead work)
 
     /******************************************************************/
 
@@ -36,6 +38,7 @@ int main(int argc, char** argv) {
         //handle when the CPU is being used
         if (activity == "CPU") {
             execution += std::to_string(current_time) + ", " + std::to_string(duration_intr) + "CPU burst\n";
+            total_user_time += duration_intr;
             current_time += duration_intr;
         }
 
@@ -66,12 +69,15 @@ int main(int argc, char** argv) {
             }
 
             execution += std::to_string(current_time) + ", 1, IRET\n";
+            total_overhead_time += 1;
             current_time += 1;
 
             execution += std::to_string(current_time) + ", " + std::to_string(context_time) + ", context restored\n";
+            total_overhead_time += context_time;
             current_time += context_time;
 
             execution += std::to_string(current_time) + ", 1, switch to user mode\n";
+            total_overhead_time += 1;
             current_time = 1;
         }
 
@@ -112,6 +118,17 @@ int main(int argc, char** argv) {
 
             execution += std::to_string(current_time) + ", 1, switch to user mode\n";
             current_time = 1;
+
+            total_overhead_time += context_time;
+            total_overhead_time += isr_activity_time;
+            total_overhead_time += context_time;
+        }
+
+        if (input_file.peek() == EOF) {
+            execution += "\n=== Simulation Summary ===\n";
+            execution += "User time: " + std::to_string(total_user_time) + " ms\n";
+            execution += "Overhead time: " + std::to_string(total_overhead_time) + " ms\n";
+            execution += "Total time: " + std::to_string(total_user_time + total_overhead_time) + " ms\n";
         }
 
 
